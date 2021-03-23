@@ -16,19 +16,20 @@ export default function useAsync<T>(func: AsyncFunction<T>): AsyncResult<T> {
     const [state, setState] = useState<AsyncState>("computing")
 
     useEffect(() => {
-        func().then(result => {
-            setResult(result)
-            setState("done")
-        }).catch(error => {
-            setError(error)
-            setState("error")
-        })
+        func()
+            .then(result => {
+                setResult(result)
+                setState("done")
+            })
+            .catch(error => {
+                setError(error)
+                setState("error")
+            })
     }, [func])
-
 
     return {
         result: result,
         error: error,
-        state: state
+        state: state,
     }
 }

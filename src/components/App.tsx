@@ -8,16 +8,18 @@ import Composer from "@components/composer/Composer"
 const App: React.FC = () => {
     return (
         <Router>
-            <div className="w-full min-h-screen h-full select-none flex flex-col
-            bg-trueGray-50">
-                <Header/>
+            <div
+                className="w-full min-h-screen h-full select-none flex flex-col
+            bg-trueGray-50"
+            >
+                <Header />
                 <Switch>
                     <Route path="/authorization_callback">
-                        <AuthorizationCallback/>
+                        <AuthorizationCallback />
                     </Route>
                     <Route path="/">
                         <WithAuthorization>
-                            <Composer/>
+                            <Composer />
                         </WithAuthorization>
                     </Route>
                 </Switch>

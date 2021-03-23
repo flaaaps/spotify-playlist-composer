@@ -31,11 +31,7 @@ const AuthorizationCallback: React.FC = () => {
         }
     }, [])
 
-    return (
-        <div className="flex justify-center items-center flex-grow">
-            {authorizationState}
-        </div>
-    )
+    return <div className="flex justify-center items-center flex-grow">{authorizationState}</div>
 }
 
 export default AuthorizationCallback

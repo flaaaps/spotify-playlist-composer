@@ -16,5 +16,5 @@ export function getAccessToken(): string | null {
 }
 
 export function authorizationHeaders() {
-    return { "Authorization": "Bearer " + getAccessToken() }
+    return { Authorization: "Bearer " + getAccessToken() }
 }

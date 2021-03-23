@@ -28,9 +28,7 @@ export async function getPlaylist(id: string): Promise<Playlist> {
 export async function getAllSongs(playlists: string[]): Promise<Song[]> {
     const result: Song[] = []
     const isAlreadyAdded = (song: Song) =>
-        !!result.find(
-            it => it.track.id === song.track.id || it.track.external_ids.isrc === song.track.external_ids.isrc
-        )
+        !!result.find(it => it.track.id === song.track.id || it.track.external_ids.isrc === song.track.external_ids.isrc)
 
     for (let id of playlists) {
         const playlist = await getPlaylist(id)

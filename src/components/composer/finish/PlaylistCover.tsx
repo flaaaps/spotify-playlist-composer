@@ -75,9 +75,7 @@ const PlaylistCover: React.FC<Props> = ({ songs }) => {
     return (
         <>
             <canvas
-                onClick={e =>
-                    changeCoverImage(e, songs[Math.floor(Math.random() * songs.length)].track.album.images[0])
-                }
+                onClick={e => changeCoverImage(e, songs[Math.floor(Math.random() * songs.length)].track.album.images[0])}
                 className="mx-auto"
                 ref={canvasRef}
                 width={canvasSize}
