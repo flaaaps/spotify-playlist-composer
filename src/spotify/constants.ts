@@ -1,5 +1,3 @@
-require("dotenv/config")
-
 const constants = {
     client_id: process.env.REACT_APP_SPOTIFY_CLIENT_ID,
     response_type: "token",
